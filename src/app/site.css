@@ -55,7 +55,7 @@ nav a:hover{background:#fff}
 .sec h2{font-size:clamp(1.35rem,2.2vw,1.7rem);margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
 .sec h3{font-size:1.05rem;margin:0 0 4px}
 .muted{color:var(--ink-soft)}
-.intro{margin:0 0 16px;max-width:60ch}
+.intro{margin:0 0 16px}
 .sec > .intro:last-child{margin-bottom:0}
 
 /* placeholders: shown until Colin provides the text */

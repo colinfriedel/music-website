@@ -74,6 +74,7 @@ export type Photo = { src: string; alt: string; focus?: string };
 export const photos = {
   heading: "Photos",
   items: [
+    { src: "/images/stage/outdoor-acoustic.jpg", alt: "Playing acoustic guitar and singing solo at an outdoor show under a Shootin' Range sign", focus: "65% 50%" },
     { src: "/images/stage/recital-hall.jpg", alt: "Playing acoustic guitar and singing on a concert hall stage", focus: "50% 72%" },
     { src: "/images/stage/band-night.jpg", alt: "Singing and playing electric guitar at an outdoor night show", focus: "50% 30%" },
     { src: "/images/stage/rooftop.jpg", alt: "Playing electric guitar sitting on a rooftop", focus: "68% 50%" },
