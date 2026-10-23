@@ -55,18 +55,15 @@ export type Album = { title: string; spotifyId: string; note: string | null };
 
 export const listen = {
   heading: "Listen",
-  recordings: [
-    {
-      title: "Shores of Galilee (Cover)",
-      note: "Recorded at home with GarageBand. All instruments/vocals performed by me, and midi drum track written by me.",
-      audio: "/audio/shores-of-galilee.m4a",
-    },
-  ] as Recording[],
+  // Audio files in public/audio. Shores of Galilee (Cover) is still there if you want it back:
+  // { title: "Shores of Galilee (Cover)", note: "Recorded at home with GarageBand. All instruments/vocals performed by me, and midi drum track written by me.", audio: "/audio/shores-of-galilee.m4a" },
+  recordings: [] as Recording[],
   albums: [
     { title: "One Million Beers", spotifyId: "2nupmPuSrbydNxQJmH5KFx", note: "College band from Santa Clara University. All originals, I played rhythm guitar on every song and sang on a couple." },
     { title: "Hummingbird Lane", spotifyId: "5aGOtnv67ZnWFA6B30WE4S", note: "Duo project made in a week on the road, with mostly covers and a few instrumental originals. I played guitar and sang on every song." },
   ] as Album[],
-  videos: [] as Video[],
+  // youtubeId is the code after youtu.be/ or watch?v= in the YouTube link.
+  videos: [{ title: "Tennessee Whiskey (Acoustic Cover)", youtubeId: "YOzqlZFRVOU" }] as Video[],
 };
 
 export type Photo = { src: string; alt: string; focus?: string };
