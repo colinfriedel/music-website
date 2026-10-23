@@ -8,7 +8,7 @@ export default function Home() {
   const facts = [
     { label: "Genres", value: play.genres, ph: "genres and influences" },
     { label: "Influences", value: play.influences, ph: "influences" },
-    { label: "Covers or originals", value: play.coversOriginals, ph: "covers, originals, or a mix" },
+    { label: "Setlist", value: play.setlistNote, ph: "what kinds of songs you play" },
     { label: "Set length", value: play.setLength, ph: "typical set length" },
   ];
 
@@ -92,7 +92,7 @@ export default function Home() {
           <section id="experience" className="panel sec" aria-labelledby="experience-h">
             <h2 id="experience-h">{experience.heading}</h2>
             {experience.intro && <p className="intro">{experience.intro}</p>}
-            {experience.gigs.length > 0 ? (
+            {experience.gigs.length > 0 && (
               <ul className="gigs">
                 {experience.gigs.map((g, i) => (
                   <li key={i} className="gig">
@@ -103,8 +103,6 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-            ) : (
-              <Placeholder>venues, events, and groups you have played with, and roughly when</Placeholder>
             )}
           </section>
 
@@ -138,8 +136,7 @@ export default function Home() {
 
           <section id="contact" className="panel sec contact" aria-labelledby="contact-h">
             <h2 id="contact-h">{contact.heading}</h2>
-            {contact.line ? <p className="intro">{contact.line}</p> : <Placeholder>a short line about booking, for example rates</Placeholder>}
-            <a className="email" href={mailto}>{site.email}</a>
+            {contact.line && <p className="intro">{contact.line}</p>}
             <a className="cta" href={mailto}>{hero.contactLabel}</a>
           </section>
         </main>

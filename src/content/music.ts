@@ -31,7 +31,7 @@ export const images = {
 
 export const hero = {
   // One-line description under the name.
-  line: null as string | null,
+  line: "A mix of intentional, rhythmic guitar playing and resonant vocals, playing your favorite songs and more. Completely self-taught, putting my heart into every song I play." as string | null,
   contactLabel: "Contact Me",
 };
 
@@ -63,8 +63,8 @@ export const listen = {
     },
   ] as Recording[],
   albums: [
-    { title: "One Million Beers", spotifyId: "2nupmPuSrbydNxQJmH5KFx", note: null },
-    { title: "Hummingbird Lane", spotifyId: "5aGOtnv67ZnWFA6B30WE4S", note: null },
+    { title: "One Million Beers", spotifyId: "2nupmPuSrbydNxQJmH5KFx", note: "College band from Santa Clara University. All originals, I played rhythm guitar on every song and sang on a couple." },
+    { title: "Hummingbird Lane", spotifyId: "5aGOtnv67ZnWFA6B30WE4S", note: "Duo project made in a week on the road, with mostly covers and a few instrumental originals. I played guitar and sang on every song." },
   ] as Album[],
   videos: [] as Video[],
 };
@@ -97,12 +97,12 @@ export const experience = {
 export const play = {
   heading: "What I play",
   // Paragraph about the solo set: instruments, vocals, style.
-  about: "I play acoustic guitar and sing." as string | null,
+  about: "Just an acoustic guitar and my voice" as string | null,
   genres: "Country, Folk, Rock, Indie (every decade of music from the 60s until now)" as string | null,
-  influences: "Grateful Dead, Zach Bryan, Turnpike Troubadours, Beatles" as string | null,
-  // For example "Mostly covers, some originals".
-  coversOriginals: "At least for right now I'm just playing covers. I'm working on originals and would hope to play a couple of those at some point." as string | null,
-  setLength: null as string | null,
+  influences: "Grateful Dead, Zach Bryan, Turnpike Troubadours, The Beatles, and many more" as string | null,
+  // Shown under the "Setlist" label.
+  setlistNote: "Covers from all of my favorite genres, both the big hits and lesser known songs." as string | null,
+  setLength: "As short or as long as desired!" as string | null,
   // Optional sample setlist: "Song - Artist" strings.
   setlist: [] as string[],
 };
@@ -111,7 +111,7 @@ export const logistics = {
   // Set show to false to hide this section.
   show: true,
   heading: "Gear and setup",
-  bring: "I can bring an amplifier for vocals and guitar, and a microphone and mic stand (everything that I will need)." as string | null,
+  bring: "I can bring an amplifier for guitar and vocals, and a microphone + mic stand (all I need is a power outlet to plug into)." as string | null,
 };
 
 export const contact = {

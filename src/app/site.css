@@ -102,8 +102,6 @@ nav a:hover{background:#fff}
 /* contact */
 .contact{text-align:center}
 .contact h2{text-align:left}
-.contact .email{display:block;font-size:clamp(1.1rem,2.4vw,1.5rem);font-weight:600;color:var(--ink);margin:14px 0 18px;overflow-wrap:anywhere}
-.contact .ph{text-align:left}
 
 footer{text-align:center;color:rgba(255,248,240,.85);font-size:.9rem;padding:4px 0 8px}
 footer a{color:inherit}
