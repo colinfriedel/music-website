@@ -132,16 +132,7 @@ export default function Home() {
           {logistics.show && (
             <section id="gear" className="panel sec" aria-labelledby="gear-h">
               <h2 id="gear-h">{logistics.heading}</h2>
-              <div className="two">
-                <div>
-                  <h3>What I bring</h3>
-                  {logistics.bring ? <p>{logistics.bring}</p> : <Placeholder>gear you bring (guitar, amp, PA, mics)</Placeholder>}
-                </div>
-                <div>
-                  <h3>What I need from the venue</h3>
-                  {logistics.need ? <p>{logistics.need}</p> : <Placeholder>what you need (power, space, sound system)</Placeholder>}
-                </div>
-              </div>
+              {logistics.bring ? <p className="intro">{logistics.bring}</p> : <Placeholder>gear you bring (guitar, amp, PA, mics)</Placeholder>}
             </section>
           )}
 
