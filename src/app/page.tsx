@@ -50,6 +50,22 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            {listen.albums.length > 0 && (
+              <div className="albums">
+                {listen.albums.map((al) => (
+                  <div key={al.spotifyId} className="album">
+                    <h3>{al.title}</h3>
+                    {al.note && <p className="muted">{al.note}</p>}
+                    <iframe
+                      src={`https://open.spotify.com/embed/album/${encodeURIComponent(al.spotifyId)}`}
+                      title={`${al.title} on Spotify`}
+                      loading="lazy"
+                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
             {listen.videos.length > 0 && (
               <div className="videos">
                 {listen.videos.map((v) => (

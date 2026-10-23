@@ -36,7 +36,9 @@ export const hero = {
 };
 
 /** Streaming and social links. Each one shows as a pill in the header. */
-export const links: { label: string; href: string }[] = [];
+export const links: { label: string; href: string }[] = [
+  { label: "YouTube", href: "https://www.youtube.com/@colinfriedel2254" },
+];
 
 export const nav = [
   { label: "Listen", href: "#listen" },
@@ -48,6 +50,8 @@ export const nav = [
 
 export type Recording = { title: string; note: string | null; audio: string };
 export type Video = { title: string; youtubeId: string };
+// spotifyId is the code after /album/ in the Spotify link. note is an optional line under the player.
+export type Album = { title: string; spotifyId: string; note: string | null };
 
 export const listen = {
   heading: "Listen",
@@ -58,6 +62,10 @@ export const listen = {
       audio: "/audio/shores-of-galilee.m4a",
     },
   ] as Recording[],
+  albums: [
+    { title: "One Million Beers", spotifyId: "2nupmPuSrbydNxQJmH5KFx", note: null },
+    { title: "Hummingbird Lane", spotifyId: "5aGOtnv67ZnWFA6B30WE4S", note: null },
+  ] as Album[],
   videos: [] as Video[],
 };
 
@@ -93,7 +101,7 @@ export const play = {
   genres: "Country, Folk, Rock, Indie (every decade of music from the 60s until now)" as string | null,
   influences: "Grateful Dead, Zach Bryan, Turnpike Troubadours, Beatles" as string | null,
   // For example "Mostly covers, some originals".
-  coversOriginals: null as string | null,
+  coversOriginals: "At least for right now I'm just playing covers. I'm working on originals and would hope to play a couple of those at some point." as string | null,
   setLength: null as string | null,
   // Optional sample setlist: "Song - Artist" strings.
   setlist: [] as string[],
