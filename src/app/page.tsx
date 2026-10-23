@@ -39,17 +39,36 @@ export default function Home() {
         <main id="main" className="stack">
           <section id="listen" className="panel sec" aria-labelledby="listen-h">
             <h2 id="listen-h">{listen.heading}</h2>
-            <div className="tracks">
-              {listen.recordings.map((r) => (
-                <div key={r.audio} className="track">
-                  <h3>{r.title}</h3>
-                  {r.note && <p className="muted">{r.note}</p>}
-                  <audio controls preload="metadata" src={r.audio}>
-                    <a href={r.audio}>Download {r.title}</a>
-                  </audio>
-                </div>
-              ))}
-            </div>
+            {listen.videos.length > 0 && (
+              <div className="videos">
+                {listen.videos.map((v) => (
+                  <div key={v.youtubeId} className="video">
+                    <h3>{v.title}</h3>
+                    <iframe
+                      src={`https://www.youtube-nocookie.com/embed/${encodeURIComponent(v.youtubeId)}`}
+                      title={v.title}
+                      loading="lazy"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
+            {listen.recordings.length > 0 && (
+              <div className="tracks">
+                {listen.recordings.map((r) => (
+                  <div key={r.audio} className="track">
+                    <h3>{r.title}</h3>
+                    {r.note && <p className="muted">{r.note}</p>}
+                    <audio controls preload="metadata" src={r.audio}>
+                      <a href={r.audio}>Download {r.title}</a>
+                    </audio>
+                  </div>
+                ))}
+              </div>
+            )}
             {listen.albums.length > 0 && (
               <div className="albums">
                 {listen.albums.map((al) => (
@@ -62,22 +81,6 @@ export default function Home() {
                       loading="lazy"
                       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                     />
-                  </div>
-                ))}
-              </div>
-            )}
-            {listen.videos.length > 0 && (
-              <div className="videos">
-                {listen.videos.map((v) => (
-                  <div key={v.youtubeId} className="video">
-                    <iframe
-                      src={`https://www.youtube-nocookie.com/embed/${encodeURIComponent(v.youtubeId)}`}
-                      title={v.title}
-                      loading="lazy"
-                      allow="encrypted-media; picture-in-picture"
-                      allowFullScreen
-                    />
-                    <p>{v.title}</p>
                   </div>
                 ))}
               </div>

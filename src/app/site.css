@@ -67,13 +67,14 @@ nav a:hover{background:#fff}
 .track{border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.65);padding:16px}
 .track p{margin:0 0 10px;font-size:.95rem}
 .track audio{width:100%;display:block}
-.albums{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:14px;margin-top:14px}
+.albums{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:14px}
 .album p{margin:0 0 8px;font-size:.95rem}
 .album h3{margin-bottom:8px}
 .album iframe{display:block;width:100%;height:352px;border:0;border-radius:12px;background:#282828}
-.videos{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr));gap:14px;margin-top:14px}
+.videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:14px}
+.videos+*,.tracks+*{margin-top:14px}
 .video iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:12px;background:#000}
-.video p{margin:6px 0 0;font-weight:600;font-size:.95rem}
+.video h3{margin-bottom:8px}
 
 /* photos */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr));gap:10px}
