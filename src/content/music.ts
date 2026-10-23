@@ -111,7 +111,7 @@ export const logistics = {
   // Set show to false to hide this section.
   show: true,
   heading: "Gear and setup",
-  bring: null as string | null,
+  bring: "I can bring an amplifier for vocals and guitar, and a microphone and micstand (everything that I will need)." as string | null,
   need: null as string | null,
 };
 
