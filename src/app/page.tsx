@@ -7,6 +7,7 @@ export default function Home() {
   const mailto = `mailto:${site.email}`;
   const facts = [
     { label: "Genres", value: play.genres, ph: "genres and influences" },
+    { label: "Influences", value: play.influences, ph: "influences" },
     { label: "Covers or originals", value: play.coversOriginals, ph: "covers, originals, or a mix" },
     { label: "Set length", value: play.setLength, ph: "typical set length" },
   ];
@@ -23,7 +24,7 @@ export default function Home() {
             </h1>
             {hero.line ? <p className="lead">{hero.line}</p> : <Placeholder>one-line description of you as a musician</Placeholder>}
             <div className="actions">
-              <a className="cta" href={mailto}>{hero.bookLabel}</a>
+              <a className="cta" href={mailto}>{hero.contactLabel}</a>
               {links.map((l) => (
                 <a key={l.href} className="pill" href={l.href} target="_blank" rel="noopener">{l.label}</a>
               ))}
@@ -132,7 +133,7 @@ export default function Home() {
             <h2 id="contact-h">{contact.heading}</h2>
             {contact.line ? <p className="intro">{contact.line}</p> : <Placeholder>a short line about booking, for example rates</Placeholder>}
             <a className="email" href={mailto}>{site.email}</a>
-            <a className="cta" href={mailto}>{hero.bookLabel}</a>
+            <a className="cta" href={mailto}>{hero.contactLabel}</a>
           </section>
         </main>
 

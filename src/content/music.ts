@@ -24,7 +24,7 @@ export const images = {
   backgroundAlt: "A band playing a backyard show at night for a packed crowd",
   nameFirst: { src: "/images/name-colin.png", alt: "Colin", width: 367, height: 180 },
   nameLast: { src: "/images/name-friedel.png", alt: "Friedel", width: 411, height: 180 },
-  portrait: { src: "/images/me.jpg", alt: "Colin Friedel smiling" },
+  portrait: { src: "/images/portrait.jpg", alt: "Colin Friedel smiling with an electric guitar on a rooftop" },
   // Link preview image, 1200x630.
   og: { src: "/images/og.jpg", alt: "Colin Friedel playing electric guitar on a rooftop", width: 1200, height: 630 },
 };
@@ -32,7 +32,7 @@ export const images = {
 export const hero = {
   // One-line description under the name.
   line: null as string | null,
-  bookLabel: "Book me",
+  contactLabel: "Contact Me",
 };
 
 /** Streaming and social links. Each one shows as a pill in the header. */
@@ -89,8 +89,9 @@ export const experience = {
 export const play = {
   heading: "What I play",
   // Paragraph about the solo set: instruments, vocals, style.
-  about: null as string | null,
-  genres: null as string | null,
+  about: "I play acoustic guitar and sing." as string | null,
+  genres: "Country, Folk, Rock, Indie (every decade of music from the 60s until now)" as string | null,
+  influences: "Grateful Dead, Zach Bryan, Turnpike Troubadours, Beatles" as string | null,
   // For example "Mostly covers, some originals".
   coversOriginals: null as string | null,
   setLength: null as string | null,
